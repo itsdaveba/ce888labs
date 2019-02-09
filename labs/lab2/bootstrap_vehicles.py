@@ -20,9 +20,9 @@ def bootstrap(sample, sample_size, iterations, ci):
 
 
 if __name__ == "__main__":
-	df = pd.read_csv('./salaries.csv')
+	df = pd.read_csv('./vehicles.csv')
 
-	data = df.values.T[1]
+	data = df.values.T[0]
 	boots = []
 	for i in range(100, 100000, 1000):
 		boot = bootstrap(data, data.shape[0], i, 95)
@@ -31,14 +31,15 @@ if __name__ == "__main__":
 		boots.append([i, boot[2], "upper"])
 		print(i)
 
-	df_boot = pd.DataFrame(boots, columns=['Bootstrap Iterations', 'Mean', "Value"])
+	df_boot = pd.DataFrame(boots, columns=['Bootstrap Iterations (Current Fleet)', 'Mean', "Value"])
 	sns_plot = sns.lmplot(df_boot.columns[0], df_boot.columns[1], data=df_boot, fit_reg=False, hue="Value")
 
 	sns_plot.axes[0, 0].set_ylim(0, )
 	sns_plot.axes[0, 0].set_xlim(0, 100000)
 
-	sns_plot.savefig("bootstrap_confidence.png", bbox_inches='tight')
-	sns_plot.savefig("bootstrap_confidence.pdf", bbox_inches='tight')
+	sns_plot.savefig("bootstrap_vehicles_current.png", bbox_inches='tight')
+	sns_plot.savefig("bootstrap_vehicles_current.pdf", bbox_inches='tight')
 
 # print ("Mean: %f")%(np.mean(data))
 # print ("Var: %f")%(np.var(data))
+

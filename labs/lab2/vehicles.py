@@ -23,7 +23,7 @@ plt.clf()
 sns_plot2 = sns.distplot(data, bins=20, kde=False, rug=True).get_figure()
 
 axes = plt.gca()
-axes.set_xlabel('Current fleet')
+axes.set_xlabel('Current fleet MPG')
 axes.set_ylabel('Fleet count')
 
 sns_plot2.savefig("histogram_vehicles_current.png", bbox_inches='tight')
@@ -37,7 +37,7 @@ plt.clf()
 sns_plot3 = sns.distplot(data, bins=20, kde=False, rug=True).get_figure()
 
 axes = plt.gca()
-axes.set_xlabel('New fleet')
+axes.set_xlabel('New fleet MPG')
 axes.set_ylabel('Fleet count')
 
 sns_plot3.savefig("histogram_vehicles_new.png", bbox_inches='tight')
