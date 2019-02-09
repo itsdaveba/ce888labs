@@ -7,5 +7,5 @@ Plotting of scatter plot and histograms of the MPG of a current fleet and a new 
 ![hist_current](labs/lab2/histogram_vehicles_current.png?raw=true)
 ![hist_new](labs/lab2/histogram_vehicles_new.png?raw=true)
 <br/><br/>Bootstrap function to compare the means of the current fleet and the new fleet of vehicles
-![bootstrap](labs/lab2/bootstrap_vehicles_current.png?raw=true)
-![bootstrap](labs/lab2/bootstrap_vehicles_new.png?raw=true)
+![bootstrap_current](labs/lab2/bootstrap_vehicles_current.png?raw=true)
+![bootstrap_new](labs/lab2/bootstrap_vehicles_new.png?raw=true)
